@@ -1,0 +1,689 @@
+.info{
+ background-color: #001D60;
+ .infoTekst{
+    @media only screen and (max-width: 500px) {
+        padding-right: 0;
+      } 
+     font-family: 'Termina';
+     font-size: 12px;
+     font-weight: 500;
+     color: white;
+     text-align: right;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     padding-right: 100px;
+     margin:0;
+ }
+ .line{
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+}
+
+.links{
+    background-color: white;
+    .links-text{
+        @media only screen and (max-width: 800px) {
+            display: none;
+          }
+    }
+    .navigation-links{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    ul{
+        padding-top: 30px;
+        text-align: right;
+
+        li{
+            @media only screen and (max-width: 1300px) {
+                padding-right: 20px;
+                padding-left: 20px;
+            } 
+            @media only screen and (max-width: 1000px) {
+                padding-right: 10px;
+                padding-left: 10px;
+            } 
+        display: inline-block;
+        padding-right: 37px;
+        padding-left: 37px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        transition: background-color 0.5s ease;  //da bude blagi prijelaz pozadine
+        a {
+            @media only screen and (max-width: 1270px) {
+                font-size: 12px;
+            } 
+            color: #001D60;
+            font-family: 'Termina';
+            font-size: 14px;
+            font-weight: 700;
+            display: block;
+            transition: color 0.5s ease; //da bude blagi prijelaz pozadine
+        }
+        &:hover{
+            background-color: #001D60;
+            a {
+                color: white;
+            }
+        }
+        }
+    }
+    .icons{
+            position: relative;
+            text-align: right;
+    
+    .nav-icon {
+        display: none;
+    // position: absolute;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        z-index: 10;
+        width: 45px;
+        height: 25px;
+       // top: 75px;
+       // right: 50px;
+        
+        
+        @media only screen and (max-width: 800px) {
+          display: inline-block;
+          } 
+    
+          @media only screen and (max-width: 500px) {
+            // margin-top: 10px;
+            width: 35px;
+          }
+    
+        span {
+          display: block;
+          position: absolute;
+          height: 3px;
+          background-color: black;
+          opacity: 1;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: 0.25s ease-in-out;
+          -moz-transition: 0.25s ease-in-out;
+          -o-transition: 0.25s ease-in-out;
+          transition: 0.25s ease-in-out;
+        
+        }
+        span:nth-child(1) {
+          width: 100%;
+          top: 0px;
+          left: 0; // border-radius: 2px;
+        }
+        span:nth-child(2) {
+          width: 100%;
+          top: 10px;
+          left: 0; // border-radius: 2px;
+          @media only screen and (max-width: 500px) {
+            top: 8px;
+          }
+        }
+        span:nth-child(3) {
+          width: 50%;
+          top: 20px;
+          right: 0; // border-radius: 2px;
+          @media only screen and (max-width: 500px) {
+            top: 16px;
+          }
+        }    
+      }
+    }  
+}
+.metal-wrapper{
+    position: relative;
+    padding-top: 190px;
+    padding-bottom: 170px;
+    // height: 500px;
+    .metal-wrapper-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image: url('../img/rolls-of-metal.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; //stavlja sliku uvijek u sredinu stranice
+        &::before{
+            content: "";
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 100%;
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001ACB', endColorstr='#001D60', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+        }
+    }
+    .metalFabrication{
+        font-family: 'Termina';
+        font-size: 48px;
+        font-weight: 700;
+        color: white;
+        line-height: 58px;
+        @media only screen and (max-width: 1400px) {
+            font-size: 40px;
+            line-height: 40px;
+           } 
+           @media only screen and (max-width: 1050px) {
+            font-size: 30px;
+            
+            line-height: 30px;
+           } 
+           @media only screen and (max-width: 760px) {
+            font-size: 25px;
+            
+            line-height: 25px;
+           } 
+           @media only screen and (max-width: 650px) {
+            font-size: 20px;
+            
+            line-height: 20px;
+           } 
+    
+    }
+    .atlantisStrives{
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: white;
+        line-height: 36px;
+        @media only screen and (max-width: 1200px) {
+            font-size: 18px;
+            line-height: 30px;
+            max-width: 80%;
+           } 
+           @media only screen and (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 30px;
+           } 
+    }
+    .metalWord{
+        color: #00FFC9;
+    }
+}
+
+.fromSketch{
+    font-family: 'Termina';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    margin-top: -80px;
+    z-index: 5;
+    position: relative;
+    background-color: white;
+    padding-left: 70px;
+    @media only screen and (max-width: 1000px) {
+        font-size: 12px;
+       } 
+}
+.services{
+    .ourServicesText{
+        font-family: 'Termina';
+        font-size: 42px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 75px;
+        @media only screen and (max-width: 950px) {
+            font-size: 30px;
+           } 
+           @media only screen and (max-width: 700px) {
+            font-size: 20px;
+           } 
+           @media only screen and (max-width: 500px) {
+            font-size: 12px;
+           } 
+
+        &::before{
+            content: attr(data-title);
+            position: absolute;
+            font-family: 'Termina';
+            font-size: 120px;
+            font-weight: 900;
+            color: #001D60;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media only screen and (max-width: 950px) {
+                font-size: 100px;
+               } 
+               @media only screen and (max-width: 800px) {
+                font-size: 80px;
+               } 
+               @media only screen and (max-width: 700px) {
+                font-size: 60px;
+               } 
+               @media only screen and (max-width: 500px) {
+                font-size: 45px;
+               } 
+        }
+    }
+}
+.jobs{
+    padding-bottom: 30px;
+    .machineBuilding{
+        background-color:#F7F8FA;
+        height: 100%;
+        @media only screen and (max-width: 768px) {
+            padding-bottom: 20px;
+           } 
+    }
+    .machining{
+        background-color:#F7F8FA;
+        height: 100%;
+        @media only screen and (max-width: 768px) {
+            padding-bottom: 20px;
+           } 
+    }
+    .fabrication{
+        background-color:#F7F8FA;
+        height: 100%;
+        @media only screen and (max-width: 992px) {
+            padding-bottom: 20px;
+           } 
+    }
+    .img-jobs{
+        width: 100%;
+        height: auto;
+    }
+    .servicesHeadline{
+        font-family: 'Termina';
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 25px;
+        min-height: 95px;
+        line-height: 39px;
+        padding-left:25px;
+        @media only screen and (max-width: 992px) {
+            font-size: 25px;
+           } 
+        
+    }
+    .servicesText{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 15px;
+        letter-spacing: 0.03em;   //razmak izmedu slova 30 = 0.0.3em
+        line-height: 28px;
+        padding-left:25px;
+    }
+}
+.pressureVessel{
+    background-color: #001D60;
+    #services{
+        color:#00FFC9;
+    }
+    .pressureVesselHeadline{
+        font-family: 'Termina';
+        font-size: 36px;
+        font-weight: 700;
+        color: white;
+        padding-top: 35px;
+        padding-bottom: 10px;
+        line-height: 47px;
+        @media only screen and (max-width: 700px) {
+            font-size: 25px;
+           } 
+    }
+    .pressureVesselText{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        @media only screen and (max-width: 700px) {
+            font-size: 14px;
+            padding-bottom: 10px;
+           } 
+    }
+    .pressureVesselImg {
+        position: relative;
+        min-height: 340px;
+        height: 100%;
+    }
+}
+.icons1{
+    .ASME{
+        // margin-top: 30px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        background-color: #001D60;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  .ASMEtext{
+    font-family: 'Termina';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    color: white;
+    margin-bottom: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @media only screen and (max-width: 575px) {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+       } 
+    
+  }
+  .asme-img {
+      padding-bottom: 15px;
+      min-height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+  }
+  .ASMEimg{
+    //   padding-bottom: 15px;
+      max-width: 50px;
+      height:  auto;
+      margin: 0 auto;
+  }
+  .icon-padding-top {
+      padding-top: 30px;
+  }
+}
+.historyAtlantis{
+    #picture{
+        width: 100%;
+        max-width: 360px;
+        margin-top: 90px;
+    }
+    .headlineAtlantis{
+    font-family: 'Termina';
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 155px;
+    line-height: 58px;
+    @media only screen and (max-width: 700px) {
+        font-size: 30px;
+        margin-top: 70px;
+       } 
+    }
+    #atlantis{
+        color:#001ACB;
+    }
+    .textAtlantis{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 40px;
+        line-height: 28px;
+        @media only screen and (max-width: 700px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+           } 
+        
+    }
+}
+.featuredProjects{
+    .project-wrapper{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+    .featuredProjectsText{
+        margin-top: 140px;
+        font-family: 'Termina';
+        font-size: 42px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 70px;
+        @media only screen and (max-width: 950px) {
+            font-size: 30px;
+           } 
+           @media only screen and (max-width: 700px) {
+            font-size: 20px;
+           } 
+           @media only screen and (max-width: 500px) {
+            font-size: 12px;
+           } 
+
+        &::before{
+            content: attr(data-title);
+            position: absolute;
+            font-family: 'Termina';
+            font-size: 120px;
+            font-weight: 900;
+            color: #001D60;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media only screen and (max-width: 950px) {
+                font-size: 100px;
+               } 
+               @media only screen and (max-width: 800px) {
+                font-size: 80px;
+               } 
+               @media only screen and (max-width: 700px) {
+                font-size: 60px;
+               } 
+               @media only screen and (max-width: 500px) {
+                font-size: 45px;
+               } 
+        }
+    }
+    .project-wrapper{
+        position: relative;
+        padding-top: 190px;
+        padding-bottom: 90px;
+        // height: 500px;
+        .project-wrapper-bg {
+            position: absolute;
+            width: 100%;
+            height: 43%;
+            top: 0px;
+            left: 0px;
+            background-image: url('../img/clayton.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            &::before{
+                content: "";
+                position: absolute;
+                top:0px;
+                left:0px;
+                width: 100%;
+                height: 100%;
+              /* ff 3.6+ */
+    background:-moz-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001ACB', endColorstr='#001D60', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(0, 29, 96, 1) 0%, rgba(0, 26, 203, 0) 100%);
+
+            }
+        }
+    }
+    .img-jobs{
+        width: 100%;
+        height: auto;
+    }
+    .projectTitle1,.machining,.fabrication {
+        background-color:#F7F8FA;
+        height: 100%;
+        @media only screen and (max-width: 768px) {
+            padding-bottom: 20px;
+           } 
+    }
+    .projectHeadline{
+        font-family: 'Termina';
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        line-height: 39px;
+        padding-left:25px;
+        @media only screen and (max-width: 992px) {
+            font-size: 25px;
+           } 
+    }
+    .projectText{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding-right: 40px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        padding-left:25px;
+    }
+}
+.footer{
+    
+    .info2{
+        background-color: #001D60;
+        padding-top: 20px;
+        @media only screen and (max-width: 992px) {
+            padding-top: 10px;
+           } 
+        .infoTekst2{
+            color: #00FFC9;
+            font-family: 'Termina';
+            font-size: 14px;
+            font-weight: 500;
+            text-align: right;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 10px;
+            margin:0;
+            @media only screen and (max-width: 992px) {
+            padding-bottom: 5px;
+            padding-top: 5px;
+            font-size: 13px;
+            } 
+        }
+        .line2{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .links-text2{
+        ul{
+            padding-top: 15px;
+            text-align: left;
+    
+            li{
+            display: inline-block;
+            padding-right: 70px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            @media only screen and (max-width: 992px) {
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-right: 40px;
+                } 
+            a{
+            font-family: 'Termina';
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            line-height: 16px;
+            @media only screen and (max-width: 992px) {
+                font-size: 12px;
+                } 
+            }
+            }
+        }
+    }
+    .footer-line{
+        width: 100%;
+        height: 1px;
+        background-color: #787878;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+    .title-all{
+        font-family: 'Termina';
+        font-size: 14px;
+        font-weight: 500;
+        color:#00FFC9;
+    }
+    .adressText{
+        font-family: 'Termina';
+        font-size: 14px;
+        font-weight: 500;
+        color:white;
+    }
+    #tason{
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: white;
+        text-align: left;
+    }
+    #privacyPolicy{
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: white;
+        text-align: right;
+    }
+    .footer-end{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .line1{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .footer-line2{
+        width: 100%;
+        height: 1px;
+        background-color: #787878;
+        margin-bottom: 25px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32">
+  <g id="Group_61" data-name="Group 61" transform="translate(-8 -16)">
+    <path id="Path_3672" data-name="Path 3672" d="M55.021,52.289l-.006,0Z" transform="translate(-23.508 -18.143)" fill="#00ffc9"/>
+    <path id="Path_3673" data-name="Path 3673" d="M52.979,52.286l-.006,0Z" transform="translate(-22.487 -18.143)" fill="#00ffc9"/>
+    <path id="Path_3674" data-name="Path 3674" d="M54,53.164a.488.488,0,0,0-.73,0,.5.5,0,0,1,.73,0Z" transform="translate(-22.635 -18.5)" fill="#00ffc9"/>
+    <path id="Path_3675" data-name="Path 3675" d="M54.147,52.379a.99.99,0,0,0-.121-.088A.933.933,0,0,1,54.147,52.379Z" transform="translate(-23.013 -18.146)" fill="#00ffc9"/>
+    <path id="Path_3676" data-name="Path 3676" d="M52.731,52.379a.932.932,0,0,1,.121-.087A.989.989,0,0,0,52.731,52.379Z" transform="translate(-22.366 -18.146)" fill="#00ffc9"/>
+    <path id="Path_3677" data-name="Path 3677" d="M52.985,52.143a1.035,1.035,0,0,1,1.015,0A.972.972,0,0,0,52.985,52.143Z" transform="translate(-22.493 -18)" fill="#00ffc9"/>
+    <path id="Path_3678" data-name="Path 3678" d="M28.082,65.157l-.023-.013.023.012Z" transform="translate(-10.03 -24.572)" fill="#00ffc9"/>
+    <path id="Path_3679" data-name="Path 3679" d="M19.918,65.144a.2.2,0,0,1-.023.012l.023-.012Z" transform="translate(-5.948 -24.572)" fill="#00ffc9"/>
+    <path id="Path_3680" data-name="Path 3680" d="M47,37H38v-2.05A9.481,9.481,0,0,0,37.5,16h-19A9.481,9.481,0,0,0,18,34.949V37H9a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h3.142A3.956,3.956,0,0,0,12,44a4,4,0,0,0,8,0,3.957,3.957,0,0,0-.142-1H36.142A3.956,3.956,0,0,0,36,44a4,4,0,0,0,8,0,3.956,3.956,0,0,0-.142-1H47a1,1,0,0,0,1-1V38a1,1,0,0,0-1-1ZM22,18H34v2H22ZM11,25.5A7.508,7.508,0,0,1,18.5,18H20v3a1,1,0,0,0,1,1H35a1,1,0,0,0,1-1V18h1.5a7.5,7.5,0,0,1,0,15h-19A7.508,7.508,0,0,1,11,25.5ZM20,35H36v2H20ZM16,46a2,2,0,1,1,2-2,2,2,0,0,1-2,2Zm24,0a2,2,0,1,1,2-2,2,2,0,0,1-2,2Zm6-5H42.616a3.927,3.927,0,0,0-5.235,0H18.618a3.927,3.927,0,0,0-5.236,0H10V39H46Z" transform="translate(0 0)" fill="#00ffc9"/>
+  </g>
+</svg>

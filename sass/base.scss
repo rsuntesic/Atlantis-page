@@ -1,0 +1,64 @@
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition-property, $transition-time, $method) {
+		-webkit-transition: $transition-property $transition-time $method;
+		-moz-transition: $transition-property $transition-time $method;
+		-ms-transition: $transition-property $transition-time $method;
+		-o-transition: $transition-property $transition-time $method;
+		transition: $transition-property $transition-time $method;
+}
+@mixin no-transition {
+	-moz-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+@mixin ti {
+    text-indent:-9999px;
+    overflow: hidden;
+}
+@mixin cf {
+  zoom: 1;
+  &:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+  }
+}
+@mixin cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+@mixin valign {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@mixin halign {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@mixin no-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-text-size-adjust:none; 
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    user-select: none;
+}
+@mixin calc($property, $expression) { 
+	#{$property}: -webkit-calc(#{$expression}); 
+	#{$property}: calc(#{$expression}); 
+} 

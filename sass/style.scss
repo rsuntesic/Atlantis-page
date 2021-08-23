@@ -1,0 +1,436 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==================================================
+    =SASS CSS
+===================================================== */
+@font-face {
+  font-family: 'Termina';
+  src: url('../fonts/termina-regular-webfont.woff2') format('woff2'),
+      url('../fonts/termina-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('../fonts/termina-black-webfont.woff2') format('woff2'),
+      url('../fonts/termina-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('../fonts/termina-bold-webfont.woff2') format('woff2'),
+      url('../fonts/termina-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('../fonts/termina-medium-webfont.woff2') format('woff2'),
+      url('../fonts/termina-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "animate";
+@import "grid";
+@import "home";
+
+/* ==================================================
+    =Styles
+===================================================== */
+
+$mainfont: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #555;
+$baseline: 20px;
+
+
+body {
+	font: 100% $mainfont;
+	color: $primary-color;
+	-webkit-text-size-adjust: none;
+}
+
+
+/* ==================================================
+    =Mixins
+===================================================== */
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition-property, $transition-time, $method) {
+		-webkit-transition: $transition-property $transition-time $method;
+		-moz-transition: $transition-property $transition-time $method;
+		-ms-transition: $transition-property $transition-time $method;
+		-o-transition: $transition-property $transition-time $method;
+		transition: $transition-property $transition-time $method;
+}
+@mixin no-transition {
+	-moz-transition: none;
+	-o-transition: none;
+	-webkit-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+@mixin ti {
+    text-indent:-9999px;
+    overflow: hidden;
+}
+@mixin cf {
+  zoom: 1;
+  &:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+  }
+}
+@mixin cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+@mixin valign {
+	position: relative;
+	top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin halign {
+	position: relative;
+	left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+@mixin no-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-text-size-adjust:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    user-select: none;
+}
+@mixin calc($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+/* ==================================================
+    =General classes for usage
+===================================================== */
+
+.left { text-align:left !important } .center { text-align:center !important } .right { text-align:right !important }
+.alignleft { float:left } .aligncenter { margin:0 auto } .alignright { float:right }
+.show { display:block!important } .hide { display:none!important }
+.cf:before, .cf:after,
+.container:before, .container:after, .widget:before, .widget:after, form ol > li:before, form ol > li:after
+  { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.cf:after, .clear,
+.container:after, .widget:after, form ol > li:after
+  { clear: both; }
+.cf, .container, .widget, form ol > li
+  { zoom: 1; }
+
+/* Defined in html element when using rem unit */
+html { font:normal 62.5% $mainfont; color:#444; background-color:#fff; }
+
+/* apply a natural box layout model to all elements */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* Buggy in IE7, avoid if developing for IE7 */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* User generated  */
+.user-content ul {
+  list-style:disc;
+  margin-left:24px;
+}
+.user-content ul ul { margin-left:20px; margin-bottom:0; }
+.user-content ul li{ margin-bottom:0; }
+.user-content ol {
+  margin-left:24px;
+  list-style:decimal;
+}
+.user-content ol ol { list-style:lower-latin; margin-bottom:0; }
+.user-content ul ul, .view ol ol { margin-bottom:0 }
+.user-content li li { font-size:1em }
+
+/* Table */
+table {
+  width:100%;
+  border:none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td, table th {
+  vertical-align:middle;
+}
+
+/* Normal form */
+.normal-form input[type="text"],
+.normal-form input[type="password"],
+.normal-form input[type="datetime"],
+.normal-form input[type="datetime-local"],
+.normal-form input[type="date"],
+.normal-form input[type="month"],
+.normal-form input[type="time"],
+.normal-form input[type="week"],
+.normal-form input[type="number"],
+.normal-form input[type="email"],
+.normal-form input[type="url"],
+.normal-form input[type="search"],
+.normal-form input[type="tel"],
+.normal-form input[type="color"],
+.normal-form textarea,
+.normal-form select {
+    -webkit-appearance: none; // removes styling on iOS devices
+}
+
+.normal-form textarea {
+	overflow: auto;
+}
+
+.normal-form input[type="text"]:focus,
+.normal-form input[type="password"]:focus,
+.normal-form input[type="datetime"]:focus,
+.normal-form input[type="datetime-local"]:focus,
+.normal-form input[type="date"]:focus,
+.normal-form input[type="month"]:focus,
+.normal-form input[type="time"]:focus,
+.normal-form input[type="week"]:focus,
+.normal-form input[type="number"]:focus,
+.normal-form input[type="email"]:focus,
+.normal-form input[type="url"]:focus,
+.normal-form input[type="search"]:focus,
+.normal-form input[type="tel"]:focus,
+.normal-form input[type="color"]:focus,
+.normal-form textarea:focus,
+.normal-form select:focus {
+	outline: none;
+}
+
+/* Button styling */
+button {
+    display:inline-block;
+    padding:10px 20px;
+    margin:0 10px 0 0;
+    font:bold 14px/20px $mainfont;
+    color:#fff;
+    border:none;
+    text-align:center;
+
+    overflow:visible;
+    cursor:pointer;
+}
+
+/* ==================================================
+    =Typography
+===================================================== */
+
+h1, h2, h3, h4, h5, h6, p, table, .user-content ul,  .user-content ol, .user-content dl { margin-bottom: $baseline; }
+h1, h2, h3, h4, h5, h6 { margin-bottom:$baseline / 2; }
+
+h1 { font:400 32px/1.3 $mainfont; }
+h2 { font:400 24px/1.2 $mainfont; }
+h3 { font:400 22px/1.2 $mainfont; }
+h4 { font:400 20px/1.2 $mainfont; }
+h5 { font:400 16px/1.2 $mainfont; }
+h6 { font:400 14px/1.2 $mainfont; }
+
+a         { text-decoration:none }
+
+/* Styling */
+strong      { font-weight:bold; }
+em        { font-style:italic; }
+sup       { vertical-align:text-top; font-size:75%; }
+sub       { vertical-align:bottom; font-size:75%; }
+blockquote    { font-style:italic; }
+
+/* User generated  */
+.user-content ul {
+  list-style:disc;
+  margin-left:24px;
+}
+.user-content ul ul { margin-left:20px; margin-bottom:0; }
+.user-content ul li{ margin-bottom:0; }
+.user-content ol {
+  margin-left:24px;
+  list-style:decimal;
+}
+.user-content ol ol { list-style:lower-latin; margin-bottom:0; }
+.user-content ul ul, .view ol ol { margin-bottom:0 }
+.user-content li li { font-size:1em }
+
+/* Table */
+table {
+  width:100%;
+  border:none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td, table th {
+  vertical-align:middle;
+}
+
+/* Normal form */
+.normal-form input[type="text"],
+.normal-form input[type="password"],
+.normal-form input[type="datetime"],
+.normal-form input[type="datetime-local"],
+.normal-form input[type="date"],
+.normal-form input[type="month"],
+.normal-form input[type="time"],
+.normal-form input[type="week"],
+.normal-form input[type="number"],
+.normal-form input[type="email"],
+.normal-form input[type="url"],
+.normal-form input[type="search"],
+.normal-form input[type="tel"],
+.normal-form input[type="color"],
+.normal-form textarea,
+.normal-form select {
+    -webkit-appearance: none; // removes styling on iOS devices
+}
+
+.normal-form input[type="text"]:focus,
+.normal-form input[type="password"]:focus,
+.normal-form input[type="datetime"]:focus,
+.normal-form input[type="datetime-local"]:focus,
+.normal-form input[type="date"]:focus,
+.normal-form input[type="month"]:focus,
+.normal-form input[type="time"]:focus,
+.normal-form input[type="week"]:focus,
+.normal-form input[type="number"]:focus,
+.normal-form input[type="email"]:focus,
+.normal-form input[type="url"]:focus,
+.normal-form input[type="search"]:focus,
+.normal-form input[type="tel"]:focus,
+.normal-form input[type="color"]:focus,
+.normal-form textarea:focus,
+.normal-form select:focus {
+	outline: none;
+}
+
+
+/* ===============================================================================
+    =Site css
+    for importing base.scss on top of media query doc copy this : @import 'base';
+=============================================================================== */
+
+
+// Delete if media queries not in use
+/* ==================================================
+    =Media Queries
+===================================================== */
+
+@media only screen and (max-width: 480px) {}
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1382px) {}
+
+/* ==================================================
+    =High def devices
+===================================================== */
+
+// Source https://gist.github.com/3446599
+@media  only screen and (min-device-pixel-ratio: 1.3),
+        only screen and (-webkit-min-device-pixel-ratio: 1.3),
+        only screen and (-o-min-device-pixel-ratio: 13/10),
+        only screen and (min-resolution: 120dpi) {
+    // Place code here
+}
+.obj-fit-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  & > img {
+      visibility: hidden !important;
+      opacity: 0 !important;
+      display: block;
+      width: 100%;
+      height: 100%;
+  }
+}
